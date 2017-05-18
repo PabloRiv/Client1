@@ -3,11 +3,11 @@ var express = require('express'),
     fs = require('fs');
 
 var app = express();
-var staticRoot = __dirname + '/dist/';
+var staticRoot = __dirname + '/';
 
 app.set('port', (process.env.PORT || 3000));
 
-app.use(express.static(staticRoot));
+app.use(express.static('dist'));
 
 app.use(function(req, res, next){
 
