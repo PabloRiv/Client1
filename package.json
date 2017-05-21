@@ -6,9 +6,12 @@
     "ng": "ng",
     "start": "node index.js",
     "build": "ng build",
+    "buildprod": "ng build --prod && npm run prodserver && npm run prodconfig",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prodserver":"cp src/server/package.json dist/",
+    "prodconfig":"cp src/server/index.js dist/"
   },
   "private": true,
   "dependencies": {
